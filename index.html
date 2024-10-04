@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Samuele Verona | Web Developer</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+    </style>
+    <script defer src="script.js"></script>
+  </head>
+  <body >
+    <header class="gradientBackground">
+      <nav id="nav" class="flex ">
+           <div id="siteIcon" class="flex"><img  src="/icons/beard_logo.png" alt=""></div>
+            <ul id="sectionsList" class="flex mediumText">
+                <li class="listItemFormat ">
+                    <button id="button1" type="button" href="#" class="navButton  tinyText textFont3" activeBtn="true" tabindex="1" >Home</button>
+                </li>
+                <li class="listItemFormat ">
+                    <button id="button2" type="button" href="#" class="navButton  tinyText textFont3" activeBtn="false" tabindex="2">Web Dev</button>
+                </li>
+                <li class="listItemFormat ">
+                    <button id="button3" type="button" href="#" class="navButton  tinyText textFont3" activeBtn="false" tabindex="3">Music</button>
+                </li>
+                <li class="listItemFormat ">
+                    <button id="button4" type="button" href="#" class="navButton  tinyText textFont3" activeBtn="false" tabindex=4">Contacts</button>
+                </li>
+                <li id="phoneBtnEl" class="listItemFormat isHidden">
+                    <button id="toTopBtn" type="button" href="#" class=" tinyText textFont3 ">back to top</button>
+                </li>
+            </ul>
+      <nav>
+    </header>
+
+    <main id="main" class="flex"   >  
+       
+
+        <section id="hero" class=" sectionsFormat activeSection" >
+            <h1 class="bigText textFont3 textColor1">Samuele Verona</h1>
+            <h2 class="mediumText textFont2">Front End Web Developer</h2>
+            <p class="smallText textFont2">Welcome!<br>I am a starting Web Developer and this is my portfolio website.</p>
+            <p class="smallText textFont2 ">Here you can have a look at my current level and projects and much more!</p>
+            <p  class="smallText textFont2 ">Welcome to my portfolio website!</p>
+        </section>
+
+        <section id="WebDev" class=" sectionsFormat">
+            <h2 class="mediumText textFont3 textColor1">Projects</h2>             
+            <ul id="projectsList">
+                <li>
+                    <h3  class="project smallText textFont2" >This website v.1</h3>
+                </li>
+                <li>
+                    <h3  class="project smallText textFont2" >Productivity app</h3>
+                </li>
+                <li>
+                    <h3  class="project smallText textFont2" >Vue course</h3>
+                </li>
+                <li>
+                    <h3  class="project smallText textFont2" >This website v.2</h3>
+                </li>
+                <li>
+                    <h3  class="project smallText textFont2" >Tbd...</h3>
+                </li>
+            </ul>
+        </section>
+
+        <section id="Music" class=" sectionsFormat">
+            <h2 class="mediumText textFont3 textColor1 isHidden">Music</h2>  
+            <svg id="musicLogo" width="300"  viewBox="0 0 1930 1243" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_d_601_16)">
+                <path d="M5 1234V1H342.021V1014H539.894V1116.33H631.808V778.66H745.426V900.169H935.638V1116.33H1053.09V778.66H859.043V646.918H745.426V529.246H631.808V1H1925V1234H1625V217.159H1521.6V1014H1390.11V309.25H1035.21V110.998H961.17V430.759H1053.09L1284.15 646.918V1116.33H1178.19V1234H5Z" stroke="black" shape-rendering="crispEdges"/>
+                </g>
+                <defs>
+                <filter id="filter0_d_601_16" x="0.5" y="0.5" width="1929" height="1242" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset dy="4"/>
+                <feGaussianBlur stdDeviation="2"/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_601_16"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_601_16" result="shape"/>
+                </filter>
+                <linearGradient id="MyGradient" x1="0%" y1="50%" x2="100%" y2="0%">
+                    <stop stop-color="rgba(33, 235, 57, 0.767)" />
+                    <stop  offset="60%"stop-color="rgba(0, 170, 255, 0.658)" />
+                </linearGradient>
+                  
+                </defs>
+                </svg>            
+            <p class="smallText textFont2">LSM is an eletronic music project of mine that spans many genres, from House to Drum & Bass to Downtempo. Here you can listen to all my lastest tracks.</p>              
+            <div id="videoContainer" class="flex" >
+                <button id="leftArrow" class="arrowButton flex " tabindex="-1"></button>
+                <button id="rightArrow" class="arrowButton flex " tabindex="-1"></button>                
+                <div class="videoElement flex " ></div>
+                <div class="videoElement flex " ></div>
+                <div class="videoElement flex " ></div>
+                <div class="videoElement flex isNotVisible " ></div>
+                <div class="videoElement flex isNotVisible " ></div>  
+            </div>
+            <div id="swipeOverlay" class="smallText textFont1">&#8810 SWIPE HERE &#8811</div>
+                <div id="videoBtnContainer" class="flex">                                           
+                    <button type="button"  class="vidButton"></button>
+                    <button type="button"  class="vidButton"></button>
+                    <button type="button"  class="vidButton"></button>
+                    <button type="button"  class="vidButton"></button>
+                    <button type="button"  class="vidButton"></button>
+                </div>
+        </section>
+
+        <section id="Contacts" class="sectionsFormat">
+            <h2 class="mediumText textFont3 textColor1">Here are some links!</h2>
+            <h3 class="smallText textFont2">You can find me at:</h3>
+            <div id="contactsContainer" class="flex">
+                <button type="button" class="contactButton" tabindex="-1">
+                    <a href="https://github.com/SamueleVerona" target="blank"  tabindex="-1"> <img src="/icons/github_icon.png" alt="github"></a>
+                </button>
+                <button type="button" class="contactButton" tabindex="-1">
+                    <a href="https://www.linkedin.com/in/samuele-verona-1820342b1" target="blank"  tabindex="-1"> <img src="/icons/linkedin_icon.png" alt="linkedin"></a>
+                </button>
+                <button type="button" class="contactButton" tabindex="-1">
+                    <a href="https://www.youtube.com/@lsmusic1975"  target="blank" tabindex="-1"> <img src="/icons/youtube_icon.png" alt="youtube"></a>
+                </button> 
+            </div>
+        </section>
+    </main>
+
+  </body>
+</html>

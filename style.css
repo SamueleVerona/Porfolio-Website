@@ -1,0 +1,811 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-style: normal;
+  font-size: 62.5%;
+  overflow: hidden;
+}
+
+:root {
+  --pinkHue1: #e7284e6e;
+  --cyanHue1: #23b9ff6e;
+  --yellowHue1: rgba(231, 151, 40, 0.431);
+  --greenHue1: rgba(40, 228, 231, 0.431);
+  --greyHue1: rgba(0, 0, 0, 0.1);
+  --textFont1: "Poppins", sans-serif;
+  --textFont2: "Mulish", sans-serif;
+  --textFont3: "SUSE", sans-serif;
+  --textWeight1: bolder;
+  --textWeight2: bold;
+  --textBiggest: 10rem;
+  --textBigger: 8rem;
+  --textBig: 6rem;
+  --textMedium: 5rem;
+  --textSmall: 4rem;
+  --textSmaller: 3.5rem;
+  --textTiny: 3rem;
+  --textTinyer: 2.8rem;
+  --textTinyest: 2.5rem;
+}
+
+*:focus {
+  border-radius: 30px;
+}
+
+.textFont1 {
+  font-family: var(--textFont1);
+}
+
+.textFont2 {
+  font-family: var(--textFont2);
+  font-optical-sizing: auto;
+}
+
+.textFont3 {
+  font-family: var(--textFont3);
+  font-optical-sizing: auto;
+}
+
+.bigText {
+  font-weight: var(--textWeight1);
+}
+
+.mediumText {
+  font-weight: var(--textWeight2);
+}
+
+.smallText {
+  font-weight: var(--textWeight2);
+}
+.tinyText {
+  font-weight: var(--textWeight2);
+}
+
+.videoTitlesText {
+  font-size: 2rem;
+  font-weight: var(--textWeight2);
+  color: black;
+  text-decoration: none;
+}
+
+.textColor1 {
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(33, 235, 235, 0.767),
+    rgba(0, 81, 255, 0.658)
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradientBackground {
+  background: linear-gradient(
+    -45deg,
+    #00000028,
+    var(--cyanHue1),
+    #28e7dd1e,
+    #00000025,
+    #28e7dd6e
+  );
+  background-size: 500% 500%;
+  transition: var 0.5s;
+  animation: gradientBannerAnimation 10s ease infinite;
+}
+
+.flex {
+  display: flex;
+}
+
+header {
+  flex: 1;
+  box-shadow: 0rem 0.6rem 3rem #cacaca79;
+}
+
+#nav {
+  position: sticky;
+  flex-direction: row;
+  align-items: center;
+  padding: 3rem;
+  background-size: cover;
+}
+
+#siteIcon {
+  flex: 1;
+  justify-content: center;
+}
+
+#siteIcon img {
+  padding-top: 0.5rem;
+  width: 12rem;
+  height: 9rem;
+  transition: all 0.6s ease-in-out;
+}
+
+#sectionsList {
+  flex: 2;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+.listItemFormat {
+  overflow: visible;
+  list-style: none;
+  flex: 1;
+}
+
+.navButton {
+  padding: 1rem;
+  background-color: rgba(205, 205, 205, 0.142);
+  border: inset rgba(205, 205, 205, 0.116);
+  border-radius: 18px;
+  border-width: 0.2rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.56);
+  text-align: justify;
+  transition-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+#button2 {
+  text-wrap: nowrap;
+}
+
+#toTopBtn {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  text-wrap: nowrap;
+  padding: 1rem;
+  background-color: linear-gradient(var(--greenHue1), var(--cyanHue1));
+  border: none;
+  border-radius: 18px;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+  opacity: 0;
+  backdrop-filter: sepia(30%);
+  transition: opacity 0.3s ease;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0.447);
+}
+
+.buttonVFX {
+  box-shadow: 0.2rem 0.6rem 1rem rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.6);
+  border: none;
+  font-weight: bolder;
+  color: rgb(0, 0, 0);
+}
+
+main {
+  height: 90svh;
+  flex-direction: row;
+  flex: 0 0 400vw;
+  background-image: url(/icons/background_8.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.sectionsFormat {
+  flex-direction: column;
+  flex-shrink: 0;
+  flex-grow: 0;
+  flex-basis: 100vw;
+  padding: 3rem 10rem;
+  transition: padding 0.3s ease;
+  background: linear-gradient(rgba(255, 255, 255, 1), rgba(58, 58, 58, 0.023));
+  height: 100%;
+}
+
+#hero {
+  padding-top: 10rem;
+}
+
+#hero p {
+  padding-top: 3rem;
+  font-weight: normal;
+}
+
+#hero p:nth-child(4) {
+  padding: 0rem;
+}
+#hero p:last-child {
+  display: none;
+}
+#projectsList {
+  padding-top: 2rem;
+}
+.project {
+  text-decoration: none;
+  color: black;
+}
+#projectsList li:first-child {
+  text-decoration: line-through;
+}
+
+#Music,
+#Contacts {
+  flex-direction: column;
+}
+#Music {
+  padding-top: 4rem;
+  position: relative;
+}
+
+#musicLogo {
+  width: 12rem;
+  fill: black;
+  transition: width 0.3s ease;
+}
+
+#Music p,
+#Contacts p {
+  font-weight: normal;
+}
+
+#Music p {
+  padding-top: 2rem;
+}
+
+#videoContainer {
+  position: relative;
+  flex-flow: row;
+  padding: 0rem;
+  align-items: center;
+  justify-content: center;
+}
+.videoElement {
+  padding: 2rem 2rem;
+  align-items: center;
+  justify-self: center;
+  transform: translateX(100%);
+  transition: transform 0.3s ease, opacity 0.2s ease;
+  overflow: visible;
+}
+
+.videoClip {
+  transform: translate(0rem, 0rem);
+  border: none;
+  border-radius: 20px;
+  transition-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  transition: all 0.6s;
+}
+#videoBtnContainer,
+#swipeOverlay {
+  width: 100%;
+  height: 30%;
+  display: none;
+  position: absolute;
+}
+.vidButton {
+  display: none;
+}
+.phoneVideoFormat {
+  width: 250px;
+  height: 150px;
+}
+
+.arrowButton {
+  position: absolute;
+  z-index: 1;
+  width: 10%;
+  height: 20rem;
+  padding: 2rem 0rem;
+  align-items: center;
+  background-color: var(--greenHue1);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  cursor: pointer;
+  transition: opacity 0.3s ease, width 0.3s ease, height 0.3s ease,
+    background-color 0.3s ease, background-size 0.3s ease;
+  border: none;
+}
+
+#leftArrow {
+  background-image: url("/icons/leftarrow_icon.png");
+  background-position: center;
+  left: 0;
+}
+#rightArrow {
+  right: 0;
+  background-image: url("/icons/rightarrow_icon.png");
+  background-position: center;
+}
+
+#contactsContainer {
+  padding: 10rem;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  transition: all 0.3s ease;
+}
+
+.contactButton {
+  padding: 1rem 3rem;
+  border: none;
+  background: none;
+  text-align: justify;
+  color: black;
+  cursor: default;
+  flex-shrink: 1rem;
+  flex-grow: 1rem;
+}
+
+.contactButton img {
+  width: 10rem;
+  transition: transform 0.3s ease;
+  background-color: var(--greenHue1);
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0.447);
+  border-radius: 50%;
+}
+
+.isNotActive {
+  width: 8%;
+  height: 18rem;
+  background-color: var(--pinkHue1);
+  opacity: 25%;
+}
+.isHidden {
+  display: none;
+}
+
+.isNotVisible {
+  opacity: 0;
+}
+
+@keyframes gradientBannerAnimation {
+  0% {
+    background-position: 0% 100%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 70%;
+  }
+}
+
+@media screen and (max-width: 2560px) {
+  .bigText {
+    font-size: var(--textBigger);
+  }
+
+  .mediumText {
+    font-size: var(--textBig);
+  }
+
+  .smallText {
+    font-size: var(--textSmall);
+  }
+  .tinyText {
+    font-size: var(--textSmaller);
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .bigText {
+    font-size: var(--textBig);
+  }
+
+  .mediumText {
+    font-size: var(--textMedium);
+  }
+
+  .smallText {
+    font-size: var(--textSmall);
+  }
+  .tinyText {
+    font-size: var(--textTiny);
+  }
+  #hero p:nth-of-type(2) {
+    display: none;
+  }
+  #hero p:nth-of-type(3) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .tinyText {
+    font-size: var(--textTinyer);
+  }
+  #siteIcon img {
+    width: 10rem;
+    height: 7rem;
+  }
+
+  #hero h2 {
+    text-wrap: wrap;
+  }
+
+  #Music p {
+    display: none;
+  }
+  #musicLogo {
+    width: 14rem;
+  }
+  #videoContainer {
+    padding-top: 6rem;
+  }
+  .arrowButton {
+    width: 16%;
+  }
+
+  #contactsContainer {
+    padding: 10rem 9rem;
+  }
+  .contactButton img {
+    width: 9rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .videoClip:hover {
+    transform: translate(0rem, -1rem);
+  }
+  .videoClip:focus {
+    transform: translateX(+ clientX);
+  }
+  .contactButton img:hover {
+    transform: translate(0rem, -1rem);
+  }
+}
+@media screen and (max-width: 835px) {
+  #contactsContainer {
+    padding: 10rem 0rem;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  #hero p:nth-of-type(1) {
+    display: none;
+  }
+  #hero p:nth-of-type(2) {
+    display: none;
+  }
+  #hero p:nth-of-type(3) {
+    display: block;
+  }
+  #contactsContainer h2 {
+    text-wrap: nowrap;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bigText {
+    font-size: var(--textBig);
+  }
+  .mediumText {
+    font-size: var(--textMedium);
+  }
+  .smalltText {
+    font-size: var(--textSmaller);
+  }
+  #siteIcon {
+    display: none;
+  }
+  #hero h1 {
+    line-height: var(--textBig);
+  }
+  #hero h2 {
+    text-wrap: wrap;
+    text-align: left;
+  }
+  #hero p:nth-of-type(3) {
+    display: block;
+  }
+  .arrowButton {
+    width: 18%;
+  }
+}
+@media screen and (max-width: 700px) {
+  #musicLogo {
+    width: 12rem;
+  }
+  .videoClip {
+    width: 25rem;
+  }
+  #contactsContainer {
+    padding: 3rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .bigText {
+    font-size: 6rem;
+  }
+  .mediumText {
+    font-size: var(--textSmall);
+  }
+  .smallText {
+    font-size: var(--textSmaller);
+  }
+  .tinyText {
+    font-size: var(--textTinyest);
+  }
+  #hero p:nth-of-type(3) {
+    display: none;
+  }
+  .videoClip {
+    width: 18rem;
+  }
+  .arrowButton {
+    background-size: 12rem;
+    background-repeat: no-repeat;
+  }
+  .contactButton img {
+    width: 8rem;
+  }
+}
+
+@media screen and (max-width: 545px) {
+  #contactsContainer {
+    padding: 3rem 0rem;
+  }
+  .contactButton img {
+    width: 5rem;
+  }
+}
+@media screen and (max-width: 426px) {
+  #nav {
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+  main {
+    overflow: scroll;
+    flex-wrap: wrap;
+    width: 100vw;
+  }
+  #siteIcon {
+    display: flex;
+    justify-content: left;
+  }
+  #siteIcon img {
+    width: 6rem;
+    height: 4.5rem;
+  }
+  .navButton {
+    display: none;
+  }
+  .sectionsFormat {
+    height: 100%;
+    width: 100%;
+    padding: 3rem 0rem;
+    text-align: center;
+    background: linear-gradient(
+      rgba(255, 255, 255, 1),
+      rgba(58, 58, 58, 0.023)
+    );
+    transform: translateX(0vw);
+    transform: translateY(0vh);
+  }
+  #phoneBtnEl {
+    display: block;
+  }
+  #toTopBtn {
+    display: block;
+    white-space: nowrap;
+    -webkit-backdrop-filter: sepia(30%);
+    backdrop-filter: sepia(30%);
+  }
+  #hero h2 {
+    text-wrap: wrap;
+    text-align: center;
+    line-height: var(--textMedium);
+  }
+  #Music {
+    align-items: center;
+    justify-content: center;
+  }
+  #Music h2 {
+    display: block;
+  }
+  #musicLogo {
+    display: none;
+  }
+  #videoContainer {
+    padding: 1rem 0rem;
+    width: 100%;
+    height: 45svh;
+    overflow: visible;
+    justify-content: center;
+    align-items: center;
+  }
+  .videoElement {
+    padding: 1rem;
+    opacity: 100;
+  }
+  .arrowButton {
+    display: none;
+  }
+  #swipeOverlay {
+    display: flex;
+    bottom: 0;
+    color: rgba(0, 0, 0, 0.447);
+    text-align: center;
+    justify-content: center;
+    align-items: start;
+    font-style: italic;
+    border-radius: 2rem;
+  }
+  #videoBtnContainer {
+    padding-top: 4rem;
+    display: flex;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: -2;
+  }
+  .videoClip {
+    width: 22rem;
+  }
+  .vidButton {
+    display: flex;
+    border-radius: 2rem;
+    border: solid rgba(6, 152, 152, 0.5) 3px;
+    background-color: var(--greenHue1);
+    margin: 0rem 1rem;
+    width: 2rem;
+    height: 2rem;
+    transition: all 0.5s ease;
+  }
+  #contactsContainer {
+    padding: 10rem 0rem;
+  }
+  .contactButton img {
+    width: 6.5rem;
+  }
+}
+
+@media only screen and (max-height: 426px) and (orientation: landscape) {
+  .smallText {
+    font-size: 3rem;
+  }
+  body {
+    display: flex;
+  }
+  header {
+    width: 20vw;
+  }
+  #siteIcon {
+    display: block;
+    flex: 1;
+  }
+  #nav {
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-size: cover;
+    height: 100svh;
+    overflow: visible;
+  }
+  main {
+    flex-direction: row;
+    flex: 0 0 80vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    flex-wrap: wrap;
+    height: 100svh;
+  }
+  .sectionsFormat {
+    padding: 3rem 3rem;
+    background: linear-gradient(
+      rgba(255, 255, 255, 1),
+      rgba(58, 58, 58, 0.023)
+    );
+    flex-shrink: 1;
+    flex-grow: 1;
+    height: 100svh;
+  }
+  #sectionsList {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .listItemFormat {
+    width: 100%;
+    padding: 0.1rem;
+  }
+  .navButton {
+    display: none;
+    text-wrap: nowrap;
+    padding: 1rem;
+    width: 100%;
+  }
+  #phoneBtnEl {
+    display: block;
+  }
+  #toTopBtn {
+    display: block;
+    -webkit-backdrop-filter: sepia(30%);
+    backdrop-filter: sepia(30%);
+  }
+  #hero {
+    padding-top: 4rem;
+  }
+  #hero p:last-child {
+    display: none;
+  }
+  #Music {
+    position: relative;
+  }
+  #Music h2 {
+    display: block;
+  }
+  #musicLogo {
+    display: none;
+  }
+
+  #Music p {
+    display: none;
+  }
+  #videoContainer {
+    width: 46%;
+    height: 80%;
+    padding: 1rem 0rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .videoElement {
+    width: 100%;
+    height: 100%;
+    padding: 3rem 0rem;
+  }
+  .videoClip {
+    opacity: 100%;
+    width: 25rem;
+    height: 16rem;
+  }
+  .arrowButton {
+    display: none;
+  }
+  #videoBtnContainer,
+  #swipeOverlay {
+    position: absolute;
+    margin: auto;
+    right: 1rem;
+    bottom: 0rem;
+    margin-bottom: 2rem;
+    width: 50%;
+    height: 62.5%;
+  }
+  #swipeOverlay {
+    display: flex;
+    color: rgba(0, 0, 0, 0.447);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    border-radius: 2rem;
+    z-index: 1;
+    padding-bottom: 2rem;
+  }
+  #videoBtnContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 7rem;
+  }
+  .vidButton {
+    display: flex;
+    border-radius: 2rem;
+    background-color: var(--greenHue1);
+    margin: 0rem 1rem;
+    width: 2rem;
+    height: 2rem;
+    transition: all 0.5s ease;
+  }
+  #contactsContainer {
+    width: 100%;
+    padding: 3rem 3rem;
+    justify-content: space-evenly;
+  }
+  .contactButton {
+    padding: 1rem 1rem;
+  }
+  .contactButton img {
+    width: 6.5rem;
+  }
+}
