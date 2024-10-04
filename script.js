@@ -263,7 +263,6 @@ const orientObserver = new IntersectionObserver(
       sections.forEach((section, i) => {
         if (visSection === section && entry.intersectionRatio > 0.5) {
           bgColorHue(i);
-          console.log(i);
         }
       });
     });
