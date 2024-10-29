@@ -221,7 +221,8 @@ main {
   text-decoration: none;
   color: black;
 }
-#projectsList li:first-child {
+#projectsList li:first-child,
+#projectsList li:nth-child(2) {
   text-decoration: line-through;
 }
 
