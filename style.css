@@ -77,7 +77,7 @@ html {
   justify-content: space-around;
   align-items: center;
   height: 10lvh;
-  background: linear-gradient(to right, var(--theme-primary-dark), rgb(96, 21, 143) 40%, rgb(96, 21, 143) 60%, var(--theme-primary-dark));
+  background: linear-gradient(to right, var(--theme-primary-dark), rgb(143, 32, 212) 40%, rgb(143, 32, 212) 60%, var(--theme-primary-dark));
 }
 .header .header__logo {
   width: 6rem;
@@ -105,9 +105,6 @@ html {
   color: white;
   flex: 1;
   padding: 1rem;
-}
-.header .navbar .navbar__list .navbar__list-item.navbar__list-item--phone {
-  display: none;
 }
 .header .navbar .navbar__list .navbar__list-item .navbar__btn {
   font-family: "BR Omega Medium";
@@ -319,9 +316,10 @@ html {
   display: flex;
   align-items: center;
   height: max-content;
-  padding: 1rem 0rem;
-  font-size: 5rem;
+  padding: 2rem 0rem 1rem 0rem;
+  font-size: 6rem;
   font-weight: 400;
+  color: var(--theme-primary-dark);
 }
 .main .section-projects .section-projects__container .section-projects__list {
   display: grid;
@@ -403,6 +401,7 @@ html {
 .main .section-music .section-music__title {
   display: none;
   font-weight: 400;
+  color: var(--theme-primary-dark);
 }
 .main .section-music .section-music__container {
   position: relative;
@@ -576,11 +575,14 @@ html {
   padding: 1rem 3rem;
 }
 .main .section-contacts .section-contacts__title {
-  font-size: 5rem;
+  color: var(--theme-primary-dark);
+  padding: 2rem 0rem;
+  font-size: 6rem;
   font-weight: 400;
 }
 .main .section-contacts .section-contacts__subtitle {
-  font-size: 3rem;
+  margin-top: 1rem;
+  font-size: 5rem;
   font-weight: 400;
 }
 .main .section-contacts .section-contacts__container {
