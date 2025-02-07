@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-
     <title>Samuele Verona | Web Developer</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -14,121 +13,192 @@
     <script defer src="script.js"></script>
   </head>
   <body >
-    <header class="gradientBackground">
-      <nav id="nav" class="flex ">
-           <div id="siteIcon" class="flex"><img  src="/icons/beard_logo.png" alt=""></div>
-            <ul id="sectionsList" class="flex mediumText">
-                <li class="listItemFormat ">
-                    <button id="button1" type="button" href="#" class="navButton  tinyText textFont3" activeBtn="true" tabindex="1" >Bio</button>
+    <header class="header">
+    <img  src="/icons/beard.webp" class="header__logo" alt="site logo">
+      <nav class="navbar  ">
+            <ul  class=" navbar__list ">
+                <li class="navbar__list-item  ">
+                    <button  type="button"  class=" navbar__btn navbar__btn--1 nav-element  " active-btn="true" data-btn-id="bio"  tabindex="1" >
+                        Bio
+                    </button>
+                    <img
+                    src="/icons/bio.png"
+                    alt="avatar icon"
+                    class="navbar__img nav-element"
+                    data-btn-id="bio"
+                    active-btn="false"
+                  />
+                    
                 </li>
-                <li class="listItemFormat ">
-                    <button id="button2" type="button" href="#" class="navButton  tinyText textFont3" activeBtn="false" tabindex="2">Web Dev</button>
+                <li class="navbar__list-item">
+                    <button " type="button"  class="navbar__btn navbar__btn--2 nav-element  " active-btn="false" data-btn-id="projects" tabindex="2">
+                        Projects
+                    </button>
+                    <img
+                    src="/icons/projects.png"
+                    alt="projects icon"
+                    class="navbar__img nav-element"
+                    data-btn-id="projects"
+                    active-btn="false"
+
+                  />
                 </li>
-                <li class="listItemFormat ">
-                    <button id="button3" type="button" href="#" class="navButton  tinyText textFont3" activeBtn="false" tabindex="3">Music</button>
+                <li class="navbar__list-item">
+                    <button  type="button"  class="navbar__btn navbar__btn--3 nav-element  " active-btn="false"  data-btn-id="music" tabindex="3">
+                        Music
+                    </button>
+                    <img
+                    src="/icons/music.png"
+                    alt="music icon"
+                    class="navbar__img nav-element"
+                    data-btn-id="music"
+                    active-btn="false"
+
+                  />
                 </li>
-                <li class="listItemFormat ">
-                    <button id="button4" type="button" href="#" class="navButton  tinyText textFont3" activeBtn="false" tabindex=4">Contacts</button>
+                <li class="navbar__list-item">
+                    <button  type="button"  class="navbar__btn navbar__btn--4 nav-element    " active-btn="false" data-btn-id="contacts" tabindex=4">
+                        Contacts
+                    </button>
+                    <img
+                    src="/icons/links.png"
+                    alt="links icon"
+                    class="navbar__img nav-element"
+                    data-btn-id="contacts"
+                    active-btn="false"
+                  />
                 </li>
-                <li id="phoneBtnEl" class="listItemFormat isHidden">
-                    <button id="toTopBtn" type="button" href="#" class=" tinyText textFont3 ">back to top</button>
-                </li>
+               
             </ul>
       <nav>
     </header>
-
-    <main id="main" class="flex"   >  
-       
-
-        <section id="hero" class=" sectionsFormat activeSection" >
-            <h1 class="bigText textFont3 textColor1">Samuele Verona</h1>
-            <h2 class="mediumText textFont2">Front End Web Developer</h2>
-            <p class="smallText textFont2">Welcome!<br>I am a starting Web Developer and this is my portfolio website.</p>
-            <p class="smallText textFont2 ">Here you can have a look at my current level and projects and much more!</p>
-            <p  class="smallText textFont2 ">Welcome to my portfolio website!</p>
-        </section>
-
-        <section id="WebDev" class=" sectionsFormat">
-            <h2 class="mediumText textFont3 textColor1">Projects</h2>             
-            <ul id="projectsList">
-                <li>
-                    <h3  class="project smallText textFont2" >This website v.1</h3>
-                </li>
-                <li>
-                    <h3  class="project smallText textFont2" >Vue course</h3>
-                </li>
-                <li>
-                    <h3  class="project smallText textFont2" >Productivity web app</h3>
-                </li>
-                <li>
-                    <h3  class="project smallText textFont2" >This website v.2</h3>
-                </li>
-                <li>
-                    <h3  class="project smallText textFont2" >Tba...</h3>
-                </li>
-            </ul>
-        </section>
-
-        <section id="Music" class=" sectionsFormat">
-            <h2 class="mediumText textFont3 textColor1 isHidden">Music</h2>  
-            <svg id="musicLogo" width="300"  viewBox="0 0 1930 1243" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g filter="url(#filter0_d_601_16)">
-                <path d="M5 1234V1H342.021V1014H539.894V1116.33H631.808V778.66H745.426V900.169H935.638V1116.33H1053.09V778.66H859.043V646.918H745.426V529.246H631.808V1H1925V1234H1625V217.159H1521.6V1014H1390.11V309.25H1035.21V110.998H961.17V430.759H1053.09L1284.15 646.918V1116.33H1178.19V1234H5Z" stroke="black" shape-rendering="crispEdges"/>
-                </g>
-                <defs>
-                <filter id="filter0_d_601_16" x="0.5" y="0.5" width="1929" height="1242" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                <feOffset dy="4"/>
-                <feGaussianBlur stdDeviation="2"/>
-                <feComposite in2="hardAlpha" operator="out"/>
-                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_601_16"/>
-                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_601_16" result="shape"/>
-                </filter>
-                <linearGradient id="MyGradient" x1="0%" y1="50%" x2="100%" y2="0%">
-                    <stop stop-color="rgba(33, 235, 57, 0.767)" />
-                    <stop  offset="60%"stop-color="rgba(0, 170, 255, 0.658)" />
-                </linearGradient>
-                  
-                </defs>
-                </svg>            
-            <p class="smallText textFont2">LSM is an eletronic music project of mine that spans many genres, from House to Drum & Bass to Downtempo. Here you can listen to all my lastest tracks.</p>              
-            <div id="videoContainer" class="flex" >
-                <button id="leftArrow" class="arrowButton flex " tabindex="-1"></button>
-                <button id="rightArrow" class="arrowButton flex " tabindex="-1"></button>                
-                <div class="videoElement flex " ></div>
-                <div class="videoElement flex " ></div>
-                <div class="videoElement flex " ></div>
-                <div class="videoElement flex isNotVisible " ></div>
-                <div class="videoElement flex isNotVisible " ></div>  
-            </div>
-            <div id="swipeOverlay" class="smallText textFont1">&#8810 SWIPE HERE &#8811</div>
-                <div id="videoBtnContainer" class="flex">                                           
-                    <button type="button"  class="vidButton"></button>
-                    <button type="button"  class="vidButton"></button>
-                    <button type="button"  class="vidButton"></button>
-                    <button type="button"  class="vidButton"></button>
-                    <button type="button"  class="vidButton"></button>
+    <main class="main ">       
+        <section class="section-hero section section--active" >
+            <div class="section-hero__container">
+                <div class="section-hero__card">
+                    <img src="/icons/avatar.jpg"  alt="" class="section-hero__img">
+                    <h1 class="section-hero__name  text-color-1">Samuele Verona</h1>                
+                    <h2 class="section-hero__label  ">Front End Web Developer</h2>
+                   
                 </div>
-        </section>
+                <div class="section-hero__desc">
+                    <p class="section-hero__desc--seg1  ">
+                        <span class="sub-text">Welcome!</span> I am a starting Web Developer and this is my portfolio website.</p>            
+                    <p class="section-hero__desc--seg2   ">Here you can have a look at my current level, projects and much more!</p>
 
-        <section id="Contacts" class="sectionsFormat">
-            <h2 class="mediumText textFont3 textColor1">Here are some links!</h2>
-            <h3 class="smallText textFont2">You can find me at:</h3>
-            <div id="contactsContainer" class="flex">
-                <button type="button" class="contactButton" tabindex="-1">
-                    <a href="https://github.com/SamueleVerona" target="blank"  tabindex="-1"> <img src="/icons/github_icon.png" alt="github"></a>
-                </button>
-                <button type="button" class="contactButton" tabindex="-1">
-                    <a href="https://www.linkedin.com/in/samuele-verona-1820342b1" target="blank"  tabindex="-1"> <img src="/icons/linkedin_icon.png" alt="linkedin"></a>
-                </button>
-                <button type="button" class="contactButton" tabindex="-1">
-                    <a href="https://www.youtube.com/@lsmusic1975"  target="blank" tabindex="-1"> <img src="/icons/youtube_icon.png" alt="youtube"></a>
-                </button> 
+                </div>
+
+            </div>
+        </section>
+        <section class="section-projects section">
+            <div class="section-projects__container">
+                <h2 class="section-projects__title   text-color-1">Projects</h2>             
+                <ul  class="section-projects__list">
+                    <li class="section-projects__list-item">
+                        <img src="/icons/beard.webp" alt="" class="section-projects__project-img">
+                       
+                        <a target="_blank" href="https://samuele-verona-webdev-portfolio.netlify.app/" class="section-projects__project-name  " >Website v.1</a>
+                    </li>
+                  
+                    <li class="section-projects__list-item">
+                        <img src="/icons/lifepal.png" width="120" alt="" class="section-projects__project-img">
+                        <a  target="_blank" href="https://lifepal.netlify.app/landing" class="section-projects__project-name  " >Productivity web app</a>
+                    </li>
+                    <li class="section-projects__list-item">
+                        <img src="/icons/site.png"  alt="" class="section-projects__project-img">
+                        <a target="_blank" href="https://s-v-portfolio.netlify.app/" class="section-projects__project-name  " >Website v.2</a>
+                    </li>
+                    <li class="section-projects__list-item">
+                        <img src="/icons/box.png"  alt="" class="section-projects__project-img">
+                        <h3  class="section-projects__project-name  " >Tba...</h3>
+                        
+
+                    </li>
+                </ul>
+
+            </div>
+
+        </section>
+        <section  class="section-music section">
+            <h2 class="section-music__title   text-color-1">Music</h2>  
+            <div class="section-music__container">
+                <section class="section-music__card">
+                    <svg  class="section-music__logo" width="300"  viewBox="0 0 1930 1243" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_d_601_16)">
+                        <path d="M5 1234V1H342.021V1014H539.894V1116.33H631.808V778.66H745.426V900.169H935.638V1116.33H1053.09V778.66H859.043V646.918H745.426V529.246H631.808V1H1925V1234H1625V217.159H1521.6V1014H1390.11V309.25H1035.21V110.998H961.17V430.759H1053.09L1284.15 646.918V1116.33H1178.19V1234H5Z" stroke="black" shape-rendering="crispEdges"/>
+                        </g>
+                        <defs>
+                        <filter id="filter0_d_601_16" x="0.5" y="0.5" width="1929" height="1242" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                        <feOffset dy="4"/>
+                        <feGaussianBlur stdDeviation="2"/>
+                        <feComposite in2="hardAlpha" operator="out"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_601_16"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_601_16" result="shape"/>
+                        </filter>
+                        <linearGradient id="MyGradient" x1="0%" y1="50%" x2="100%" y2="0%">
+                            <stop stop-color="rgba(33, 235, 57, 0.767)" />
+                            <stop  offset="60%"stop-color="rgba(0, 170, 255, 0.658)" />
+                        </linearGradient>
+                          
+                        </defs>
+                        </svg>            
+                    <p class="section-music__desc  ">LSM is an eletronic music project of mine that spans many genres, from House to Drum & Bass to Downtempo. <br> Hit play and have a listen!</p>              
+                </section>
+                <div class="section-music__media-container " >
+                    <button  class="section-music__btn section-music__btn--left   " tabindex="-1"></button>
+                    <button class="section-music__btn section-music__btn--right   " tabindex="-1"></button>                
+                    <div class="section-music__video " ></div>
+                    <div class="section-music__video " ></div>
+                    <div class="section-music__video " ></div>
+                    <div class="section-music__video  not-visible" ></div>
+                    <div class="section-music__video  not-visible" ></div>  
+                    <div class="section-music__ref-container"> 
+                        <div class="section-music__ref"></div>
+                        <div class="section-music__ref"></div>
+                        <div class="section-music__ref"></div>
+                        <div class="section-music__ref"></div>
+                        <div class="section-music__ref"></div>
+                    </div>
+                </div>
+                <div class="section-music__overlay">&#8810 SWIPE HERE &#8811                
+                </div>
+            
+            </div>
+        </section>
+        <section class="section-contacts section">
+            <h1 class="section-contacts__title  text-color-1">Here are some links!</h1>
+            <h2 class="section-contacts__subtitle  ">You can find me at:</h2>
+            <div class="section-contacts__container">
+                <div  class="section-contacts__contact">
+                    <a href="https://github.com/SamueleVerona" class="section-contacts__contact-link" target="_blank" title="github link" > 
+                        <img src="/icons/github_icon.png" 
+                        width="100"
+                        alt="github icon" class="section-contacts__contact-img">
+                    </a>
+                    <h3 class="section-contacts__contact-name ">GitHub</h3>
+                </div>
+                <div  class= "section-contacts__contact">
+                    <a href="https://www.linkedin.com/in/samuele-verona-1820342b1" class="section-contacts__contact-link" title="linkedin link" target="_blank" >
+                         <img src="/icons/linkedin_icon.png" 
+                         width="100"
+                        class="section-contacts__contact-img" alt="linkedin icon">
+                    </a>
+                    <h3 class="section-contacts__contact-name ">LinkedIn</h3>
+                </div>
+                <div  class= 
+                "section-contacts__contact">
+                    <a href="https://www.youtube.com/@lsmusic1975" class="section-contacts__contact-link" title="youtube link"  target="_blank"> 
+                        <img src="/icons/youtube_icon.png" 
+                        width="100"
+                        class="section-contacts__contact-img" alt="youtube icon">
+                    </a>
+                    <h3 class="section-contacts__contact-name ">YouTube</h3>
+                </div> 
             </div>
         </section>
     </main>
-
   </body>
 </html>

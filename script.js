@@ -1,29 +1,27 @@
 "use strict";
 
-const navBtnsContainer = document.querySelector("#sectionsList");
-const navBtns = document.querySelectorAll(".navButton");
-const phoneBtnEl = document.querySelector("#phoneBtnEl");
-const phoneBtn = document.querySelector("#toTopBtn");
-const main = document.querySelector("main");
-const sections = document.querySelectorAll(".sectionsFormat");
-const siteIcon = document.querySelector("#siteIcon").firstElementChild;
-const header = document.querySelector("header");
-const videoContainer = document.querySelector("#videoContainer");
-const videoElements = document.querySelectorAll(".videoElement");
-const vidArrowBtns = document.querySelectorAll(".arrowButton");
-const vidSwipeArea = document.querySelector("#swipeOverlay");
-const vidSwipeBtns = document
-  .querySelector("#videoBtnContainer")
-  .querySelectorAll("button");
-const contLinks = sections[3].querySelectorAll("a");
+const navBtnsContainer = document.querySelector(".navbar__list");
+const navBtns = document.querySelectorAll(".navbar__btn");
+const main = document.querySelector(".main");
+const sections = document.querySelectorAll(".section");
+const siteIcon = document.querySelector(".header__logo");
+const header = document.querySelector(".header");
+const videoContainer = document.querySelector(
+  ".section-music__media-container"
+);
+const videoElements = document.querySelectorAll(".section-music__video");
+const vidArrowBtns = document.querySelectorAll(".section-music__btn");
+const vidSwipeArea = document.querySelector(".section-music__overlay");
+const vidSwipeBtns = document.querySelectorAll(".section-music__ref");
+const contLinks = document.querySelectorAll(".section-contacts__contact-link");
 const specialCharLesser = htmlEntityToString("&#8810;");
 const specialCharGreater = htmlEntityToString("&#8811;");
 
 const hueArr = [
-  "var(--cyanHue1)",
-  "var(--pinkHue1)",
-  "var(--yellowHue1)",
-  "var(--greenHue1)",
+  "var(--cyan-hue-1)",
+  "var(--pink-hue-1)",
+  "var(--yellow-hue-1)",
+  "var(--green-hue-1)",
 ];
 
 const vidUrlArr = [
@@ -81,30 +79,12 @@ const addClass = function (element, className) {
 const remClass = function (element, className) {
   element.classList.remove(className);
 };
-const bgColorHue = function (number) {
-  header.style.setProperty(
-    "background",
-    ` linear-gradient(
-      -45deg,
-      #00000028,
-      ${hueArr[number]},
-      #28e7dd1e,
-      #00000025,
-      #28e7dd6e
-    )`
-  );
-  header.style.setProperty("background-size", " 500% 500%");
-  header.style.setProperty(
-    "animation",
-    " gradientBannerAnimation 10s ease infinite"
-  );
-};
 
 const activeBtnCheck = function () {
   navBtns.forEach((button) => {
-    button.getAttribute("activeBtn") === "true"
-      ? addClass(button, "buttonVFX")
-      : remClass(button, "buttonVFX");
+    button.getAttribute("active-btn") === "true"
+      ? addClass(button, "btn--active")
+      : remClass(button, "btn--active");
   });
 };
 
@@ -117,15 +97,13 @@ const iframeLoader = function () {
     };
     const iframe = document.createElement("iframe");
     iframe.src = url + "?controls=1";
-    iframe.width = "300";
-    iframe.height = "200";
     iframe.frameborder = "0";
     iframe.allow =
       "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
     iframe.referrerpolicy = "strict-origin-when-cross-origin";
     iframe.allowFullscreen = true;
     iframe.tabIndex = "-1";
-    iframe.classList.add("videoClip");
+    iframe.classList.add("section-music__video-iframe");
     videoElements[i].insertAdjacentElement("afterbegin", iframe);
     iframe.addEventListener("load", vidContShow);
   });
@@ -142,15 +120,11 @@ const logoAnimation = function (rotCoeff) {
 const swipeBtnDisplay = function () {
   vidSwipeBtns.forEach((btn, i) => {
     if (swipeCounter + 2 === i) {
-      btn.style.background = "var(--greenHue1)";
-      btn.style.width = "2rem";
-      btn.style.height = "2rem";
-      btn.style.border = " solid  rgba(6, 152, 152, 0.1) 3px";
+      btn.classList.remove("ref--not-active");
+      btn.classList.add("ref--active");
     } else {
-      btn.style.background = "var(--greyHue1)";
-      btn.style.width = "1rem";
-      btn.style.height = "1rem";
-      btn.style.border = "none";
+      btn.classList.add("ref--not-active");
+      btn.classList.remove("ref--active");
     }
   });
 };
@@ -169,10 +143,10 @@ const vidDisplayHide = function (target, action, opacity, tabIndex) {
     target.tabIndex = `${tabIndex}`;
   }
   target.style.opacity = `${opacity}`;
-  action(target, "activeVidEl");
-  if (target === videoElements[0]) action(vidArrowBtns[1], "isNotActive");
+  action(target, "section-music__video--active");
+  if (target === videoElements[0]) action(vidArrowBtns[1], "btn--not-active");
   if (target === videoElements[videoElements.length - 1])
-    action(vidArrowBtns[0], "isNotActive");
+    action(vidArrowBtns[0], "btn--not-active");
 };
 
 const vidContCbk = (entries, _) => {
@@ -189,27 +163,6 @@ const vidContObserver = new IntersectionObserver(vidContCbk, {
   root: videoContainer,
   threshold: 0,
   rootMargin: "0% -35% 0% -35%",
-});
-
-const topScrollCbk = (entries, _) => {
-  entries.forEach((entry) => {
-    if (entry.intersectionRatio < 0.5) {
-      phoneBtnEl.style.setProperty("z-index", "1");
-      phoneBtn.style.opacity = "100";
-      phoneBtnEl.addEventListener("click", scrollToTop);
-    }
-    if (entry.intersectionRatio > 0.5) {
-      {
-        phoneBtn.style.opacity = "0";
-        phoneBtnEl.style.setProperty("z-index", "-1");
-        phoneBtnEl.removeEventListener("click", scrollToTop);
-      }
-    }
-  });
-};
-const topScrollObserver = new IntersectionObserver(topScrollCbk, {
-  root: null,
-  threshold: 0.5,
 });
 
 const swipeStartCbk = function (e) {
@@ -249,7 +202,6 @@ function handleSwipe() {
 
 const scrollToInit = function () {
   swipeFunction(vidSwipeArea);
-  topScrollObserver.observe(sections[0]);
 };
 
 const orientObserver = new IntersectionObserver(
@@ -262,7 +214,11 @@ const orientObserver = new IntersectionObserver(
       visSection = entry.target;
       sections.forEach((section, i) => {
         if (visSection === section && entry.intersectionRatio > 0.5) {
-          bgColorHue(i);
+          navBtns.forEach((btn, idx) =>
+            i === idx
+              ? btn.setAttribute("active-btn", true)
+              : btn.setAttribute("active-btn", false)
+          );
         }
       });
     });
@@ -309,16 +265,15 @@ window.addEventListener(
 const updateActiveBtn = function (targetIndex) {
   navBtns.forEach((_, i) => {
     if (i !== targetIndex) {
-      navBtns[i].setAttribute("activeBtn", "false");
+      navBtns[i].setAttribute("active-btn", "false");
     } else {
-      navBtns[i].setAttribute("activeBtn", "true");
+      navBtns[i].setAttribute("active-btn", "true");
     }
     activeBtnCheck();
   });
 };
 
 const showTarget = function (targetIndex, target) {
-  // viewportWidth = window.innerWidth;
   const keyframes = [
     { transform: `translateX(${-refIndex * viewportWidth}px)` },
     { transform: `translateX(${-targetIndex * viewportWidth}px)` },
@@ -333,8 +288,8 @@ const showTarget = function (targetIndex, target) {
 
   sections.forEach((section, i) => {
     i === targetIndex
-      ? addClass(section, "activeSection")
-      : remClass(section, "activeSection");
+      ? addClass(section, "section--active")
+      : remClass(section, "section--active");
   });
 
   if (targetIndex !== refIndex)
@@ -343,7 +298,7 @@ const showTarget = function (targetIndex, target) {
     });
 
   refIndex = targetIndex;
-  activeSection = document.querySelector(".activeSection");
+  activeSection = document.querySelector(".section--active");
   logoAnimation(targetIndex);
   updateActiveBtn(targetIndex);
   updateTabIndex(target);
@@ -368,17 +323,26 @@ const updateTabIndex = function (curTarget) {
     loadFlag = false;
     tabAbleDisable(vidArrowBtns, -1);
     tabAbleDisable(contLinks, -1);
-    tabAbleDisable(document.querySelectorAll(".activeVidEl"), -1);
+    tabAbleDisable(
+      document.querySelectorAll(".section-music__video--active"),
+      -1
+    );
   }
   if (activeSection === sections[2]) {
     tabAbleDisable(vidArrowBtns, 0);
     tabAbleDisable(contLinks, -1);
-    tabAbleDisable(document.querySelectorAll(".activeVidEl"), 0);
+    tabAbleDisable(
+      document.querySelectorAll(".section-music__video--active"),
+      0
+    );
   }
   if (activeSection === sections[3]) {
     tabAbleDisable(vidArrowBtns, -1);
     tabAbleDisable(contLinks, 0);
-    tabAbleDisable(document.querySelectorAll(".activeVidEl"), -1);
+    tabAbleDisable(
+      document.querySelectorAll(".section-music__video--active"),
+      -1
+    );
   }
   lastTarget = curTarget;
 };
@@ -398,13 +362,38 @@ document.addEventListener("keydown", function (e) {
   }
 });
 
-navBtnsContainer.addEventListener("click", function (e) {
-  navBtns.forEach((btn, i) => {
-    if (e.target === btn && e.target.getAttribute("activeBtn") === "false") {
-      curTarget = e.target;
-      showTarget(i, btn);
+const navImgs = document.querySelectorAll(".navbar__img");
 
-      lastFocused = btn;
+navBtnsContainer.addEventListener("click", function (e) {
+  const target = e.target;
+  if (!target.dataset.btnId) return;
+
+  const isLargeBtn = target.classList.contains("navbar__btn");
+  const isSmallBtn = target.classList.contains("navbar__img");
+  const isActive = target.getAttribute("active-btn") === "true";
+  let targetBtns;
+
+  if (isLargeBtn) {
+    targetBtns = navBtns;
+  }
+  if (isSmallBtn) {
+    targetBtns = navImgs;
+  }
+
+  if (screen.width < 450) {
+    let index;
+    targetBtns.forEach((btn, i) => {
+      if (btn === target) index = i;
+    });
+    sections[index].scrollIntoView({ behavior: "smooth" });
+    return;
+  }
+
+  targetBtns.forEach((el, i) => {
+    if (target === el && !isActive) {
+      curTarget = target;
+      showTarget(i, el);
+      lastFocused = el;
     }
   });
 });
@@ -419,15 +408,15 @@ const vidZap = function () {
 
 videoContainer.addEventListener("click", function (e) {
   if (
-    e.target.id.includes("left") &&
-    !e.target.classList.contains("isNotActive")
+    e.target.classList.contains("section-music__btn--left") &&
+    !e.target.classList.contains("btn--not-active")
   ) {
     vidZapCounter++;
     vidZap();
   }
   if (
-    e.target.id.includes("right") &&
-    !e.target.classList.contains("isNotActive")
+    e.target.classList.contains("section-music__btn--right") &&
+    !e.target.classList.contains("btn--not-active")
   ) {
     vidZapCounter--;
     vidZap();
@@ -460,6 +449,7 @@ const updateTransformOnResize = function () {
     fill: "forwards",
     easing: "cubic-bezier(0.42, 0, 0.58, 1)",
   };
+
   sections.forEach((section) => {
     section.style.transform = `translateX(${translateValue}px)`;
     section.animate(keyframes, options);
@@ -467,13 +457,12 @@ const updateTransformOnResize = function () {
 };
 
 window.addEventListener("resize", function (e) {
-  // e.preventDefault();
   updateTransformOnResize();
 
   if (e.target.screen.width < 576) {
     sections.forEach((section) => logoRotObserver.observe(section));
     videoElements.forEach((el) => {
-      remClass(el, "isNotVisible");
+      remClass(el, "not-visible");
     });
   }
   if (e.target.screen.width === 426) showTarget(0, navBtns[0]);
