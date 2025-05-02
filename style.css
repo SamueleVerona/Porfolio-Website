@@ -714,9 +714,6 @@ html {
   .section-link__btn {
     display: none;
   }
-  .section-link__img {
-    display: none;
-  }
   .section {
     width: 100%;
     min-height: 100dvh;
@@ -740,6 +737,7 @@ html {
     line-height: 3rem;
   }
   .section-projects__list {
+    height: 85%;
     grid-template-columns: 1fr;
   }
   .section-projects__project-name {

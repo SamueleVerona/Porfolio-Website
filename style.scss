@@ -792,10 +792,6 @@ html {
     display: none;
   }
 
-  .section-link__img {
-    display: none;
-  }
-
   .section {
     width: 100%;
     min-height: 100dvh;
@@ -822,6 +818,7 @@ html {
   }
   .section-projects {
     &__list {
+      height: 85%;
       grid-template-columns: 1fr;
     }
 
