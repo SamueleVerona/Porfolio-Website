@@ -431,6 +431,7 @@ html {
     &__img {
       width: 5rem;
       height: 5rem;
+      object-fit: contain;
       aspect-ratio: 1;
     }
 
