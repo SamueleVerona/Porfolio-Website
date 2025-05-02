@@ -14,77 +14,82 @@
   </head>
   <body >
     <header class="header">
-    <img  src="/icons/beard.webp" class="header__logo" alt="site logo">
-      <nav class="navbar  ">
-            <ul  class=" navbar__list ">
-                <li class="navbar__list-item  ">
-                    <button  type="button"  class=" navbar__btn navbar__btn--1 nav-element  " active-btn="true" data-btn-id="bio"  tabindex="1" >
+        <div class="logo-box">
+            <img class="logo"  src="/icons/beard.webp"  alt="site logo">
+        </div>
+        <nav class="navbar">
+            <ul  class="sections-list">
+                <li class="section-link">
+                    <button  type="button"  class=" section-link__btn section-link__btn--1 " active-btn="true" data-btn-id="bio"  tabindex="1" >
                         Bio
                     </button>
                     <img
                     src="/icons/bio.png"
                     alt="avatar icon"
-                    class="navbar__img nav-element"
+                    class="section-link__img "
                     data-btn-id="bio"
                     active-btn="false"
-                  />
+                />
                     
                 </li>
-                <li class="navbar__list-item">
-                    <button " type="button"  class="navbar__btn navbar__btn--2 nav-element  " active-btn="false" data-btn-id="projects" tabindex="2">
+                <li class="section-link">
+                    <button " type="button"  class="section-link__btn section-link__btn--2   " active-btn="false" data-btn-id="projects" tabindex="2">
                         Projects
                     </button>
                     <img
                     src="/icons/projects.png"
                     alt="projects icon"
-                    class="navbar__img nav-element"
+                    class="section-link__img "
                     data-btn-id="projects"
                     active-btn="false"
 
-                  />
+                />
                 </li>
-                <li class="navbar__list-item">
-                    <button  type="button"  class="navbar__btn navbar__btn--3 nav-element  " active-btn="false"  data-btn-id="music" tabindex="3">
+                <li class="section-link">
+                    <button  type="button"  class="section-link__btn section-link__btn--3   " active-btn="false"  data-btn-id="music" tabindex="3">
                         Music
                     </button>
                     <img
                     src="/icons/music.png"
                     alt="music icon"
-                    class="navbar__img nav-element"
+                    class="section-link__img "
                     data-btn-id="music"
                     active-btn="false"
 
-                  />
+                />
                 </li>
-                <li class="navbar__list-item">
-                    <button  type="button"  class="navbar__btn navbar__btn--4 nav-element    " active-btn="false" data-btn-id="contacts" tabindex=4">
+                <li class="section-link">
+                    <button  type="button"  class="section-link__btn section-link__btn--4     " active-btn="false" data-btn-id="contacts" tabindex=4">
                         Contacts
                     </button>
                     <img
                     src="/icons/links.png"
                     alt="links icon"
-                    class="navbar__img nav-element"
+                    class="section-link__img "
                     data-btn-id="contacts"
                     active-btn="false"
-                  />
+                />
                 </li>
-               
+            
             </ul>
-      <nav>
+        <nav>
     </header>
     <main class="main ">       
         <section class="section-hero section section--active" >
             <div class="section-hero__container">
                 <div class="section-hero__card">
-                    <img src="/icons/avatar.jpg"  alt="" class="section-hero__img">
-                    <h1 class="section-hero__name  text-color-1">Samuele Verona</h1>                
-                    <h2 class="section-hero__label  ">Front End Web Developer</h2>
+                    <img src="/icons/avatar.jpg"  alt="" class="section-hero__card-img">
+                    <h1 class="section-hero__card-name  text-color-1">Samuele Verona</h1>                
+                    <h2 class="section-hero__card-label  ">Front End Web Developer</h2>
                    
                 </div>
-                <div class="section-hero__desc">
-                    <p class="section-hero__desc--seg1  ">
-                        <span class="sub-text">Welcome!</span> I am a starting Web Developer and this is my portfolio website.</p>            
-                    <p class="section-hero__desc--seg2   ">Here you can have a look at my current level, projects and much more!</p>
+                <div class="section-hero__bio">
+                    <p class="section-hero__bio-para">
+                        <span >Welcome!</span> I am a starting Web Developer and this is my portfolio website.
+                    </p>            
+                    <p class="section-hero__bio-para">
+                        Here you can have a look at my current level, projects and much more!
+                    </p>
 
                 </div>
 
@@ -94,36 +99,32 @@
             <div class="section-projects__container">
                 <h2 class="section-projects__title   text-color-1">Projects</h2>             
                 <ul  class="section-projects__list">
-                    <li class="section-projects__list-item">
-                        <img src="/icons/beard.webp" alt="" class="section-projects__project-img">
-                       
-                        <a target="_blank" href="https://samuele-verona-webdev-portfolio.netlify.app/" class="section-projects__project-name  " >Website v.1</a>
+                    <li class="project">
+                        <img src="/icons/beard.webp" alt="" class="project__img">
+                        <a target="_blank" href="https://samuele-verona-webdev-portfolio.netlify.app/" class="project__name  " >Website v.1</a>
                     </li>
                   
-                    <li class="section-projects__list-item">
-                        <img src="/icons/lifepal.png" width="120" alt="" class="section-projects__project-img">
-                        <a  target="_blank" href="https://lifepal.netlify.app/landing" class="section-projects__project-name  " >Productivity web app</a>
+                    <li class="project">
+                        <img src="/icons/lifepal.png" width="120" alt="" class="project__img">
+                        <a  target="_blank" href="https://lifepal.netlify.app/landing" class="project__name  " >Productivity web app</a>
                     </li>
-                    <li class="section-projects__list-item">
-                        <img src="/icons/site.png"  alt="" class="section-projects__project-img">
-                        <a target="_blank" href="https://s-v-portfolio.netlify.app/" class="section-projects__project-name  " >Website v.2</a>
+                    <li class="project">
+                        <img src="/icons/site.png"  alt="" class="project__img">
+                        <a target="_blank" href="https://s-v-portfolio.netlify.app/" class="project__name  " >Website v.2</a>
                     </li>
-                    <li class="section-projects__list-item">
-                        <img src="/icons/box.png"  alt="" class="section-projects__project-img">
-                        <h3  class="section-projects__project-name  " >Tba...</h3>
-                        
-
+                    <li class="project">
+                        <img src="/icons/box.png"  alt="" class="project__img">
+                        <h3  class="project__name" >Tba...</h3>
                     </li>
                 </ul>
 
             </div>
-
         </section>
         <section  class="section-music section">
             <h2 class="section-music__title   text-color-1">Music</h2>  
             <div class="section-music__container">
                 <section class="section-music__card">
-                    <svg  class="section-music__logo" width="300"  viewBox="0 0 1930 1243" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg  class="section-music__card-logo" width="300"  viewBox="0 0 1930 1243" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter="url(#filter0_d_601_16)">
                         <path d="M5 1234V1H342.021V1014H539.894V1116.33H631.808V778.66H745.426V900.169H935.638V1116.33H1053.09V778.66H859.043V646.918H745.426V529.246H631.808V1H1925V1234H1625V217.159H1521.6V1014H1390.11V309.25H1035.21V110.998H961.17V430.759H1053.09L1284.15 646.918V1116.33H1178.19V1234H5Z" stroke="black" shape-rendering="crispEdges"/>
                         </g>
@@ -145,11 +146,11 @@
                           
                         </defs>
                         </svg>            
-                    <p class="section-music__desc  ">LSM is an eletronic music project of mine that spans many genres, from House to Drum & Bass to Downtempo. <br> Hit play and have a listen!</p>              
+                    <p class="section-music__card-bio  ">LSM is an eletronic music project of mine that spans many genres, from House to Drum & Bass to Downtempo. <br> Hit play and have a listen!</p>              
                 </section>
                 <div class="section-music__media-container " >
-                    <button  class="section-music__btn section-music__btn--left   " tabindex="-1"></button>
-                    <button class="section-music__btn section-music__btn--right   " tabindex="-1"></button>                
+                    <button  class="section-music__btn section-music__btn--prev   " tabindex="-1"></button>
+                    <button class="section-music__btn section-music__btn--next   " tabindex="-1"></button>                
                     <div class="section-music__video " ></div>
                     <div class="section-music__video " ></div>
                     <div class="section-music__video " ></div>
@@ -163,7 +164,7 @@
                         <div class="section-music__ref"></div>
                     </div>
                 </div>
-                <div class="section-music__overlay">&#8810 SWIPE HERE &#8811                
+                <div class="section-music__swipe-overlay">&#8810 SWIPE HERE &#8811                
                 </div>
             
             </div>
@@ -172,28 +173,28 @@
             <h1 class="section-contacts__title  text-color-1">Here are some links!</h1>
             <h2 class="section-contacts__subtitle  ">You can find me at:</h2>
             <div class="section-contacts__container">
-                <div  class="section-contacts__contact">
+                <div  class="section-contacts__contact section-contacts__contact--1">
                     <a href="https://github.com/SamueleVerona" class="section-contacts__contact-link" target="_blank" title="github link" > 
                         <img src="/icons/github_icon.png" 
                         width="100"
-                        alt="github icon" class="section-contacts__contact-img">
+                        alt="github icon" class="section-contacts__contact-link-img">
                     </a>
                     <h3 class="section-contacts__contact-name ">GitHub</h3>
                 </div>
-                <div  class= "section-contacts__contact">
+                <div  class= "section-contacts__contact section-contacts__contact--2">
                     <a href="https://www.linkedin.com/in/samuele-verona-1820342b1" class="section-contacts__contact-link" title="linkedin link" target="_blank" >
                          <img src="/icons/linkedin_icon.png" 
                          width="100"
-                        class="section-contacts__contact-img" alt="linkedin icon">
+                        class="section-contacts__contact-link-img" alt="linkedin icon">
                     </a>
                     <h3 class="section-contacts__contact-name ">LinkedIn</h3>
                 </div>
                 <div  class= 
-                "section-contacts__contact">
+                "section-contacts__contact section-contacts__contact--3">
                     <a href="https://www.youtube.com/@lsmusic1975" class="section-contacts__contact-link" title="youtube link"  target="_blank"> 
                         <img src="/icons/youtube_icon.png" 
                         width="100"
-                        class="section-contacts__contact-img" alt="youtube icon">
+                        class="section-contacts__contact-link-img" alt="youtube icon">
                     </a>
                     <h3 class="section-contacts__contact-name ">YouTube</h3>
                 </div> 

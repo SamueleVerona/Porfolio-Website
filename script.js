@@ -1,17 +1,16 @@
 "use strict";
 
-const navBtnsContainer = document.querySelector(".navbar__list");
-const navBtns = document.querySelectorAll(".navbar__btn");
+const navBtnsContainer = document.querySelector(".sections-list");
+const navBtns = document.querySelectorAll(".section-link__btn");
 const main = document.querySelector(".main");
 const sections = document.querySelectorAll(".section");
-const siteIcon = document.querySelector(".header__logo");
-const header = document.querySelector(".header");
+const siteIcon = document.querySelector(".logo-box");
 const videoContainer = document.querySelector(
   ".section-music__media-container"
 );
 const videoElements = document.querySelectorAll(".section-music__video");
 const vidArrowBtns = document.querySelectorAll(".section-music__btn");
-const vidSwipeArea = document.querySelector(".section-music__overlay");
+const vidSwipeArea = document.querySelector(".section-music__swipe-overlay");
 const vidSwipeBtns = document.querySelectorAll(".section-music__ref");
 const contLinks = document.querySelectorAll(".section-contacts__contact-link");
 const specialCharLesser = htmlEntityToString("&#8810;");
@@ -362,14 +361,14 @@ document.addEventListener("keydown", function (e) {
   }
 });
 
-const navImgs = document.querySelectorAll(".navbar__img");
+const navImgs = document.querySelectorAll(".section-link__img");
 
 navBtnsContainer.addEventListener("click", function (e) {
   const target = e.target;
   if (!target.dataset.btnId) return;
 
-  const isLargeBtn = target.classList.contains("navbar__btn");
-  const isSmallBtn = target.classList.contains("navbar__img");
+  const isLargeBtn = target.classList.contains("section-link__btn");
+  const isSmallBtn = target.classList.contains("section-link__img");
   const isActive = target.getAttribute("active-btn") === "true";
   let targetBtns;
 
@@ -408,14 +407,14 @@ const vidZap = function () {
 
 videoContainer.addEventListener("click", function (e) {
   if (
-    e.target.classList.contains("section-music__btn--left") &&
+    e.target.classList.contains("section-music__btn--prev") &&
     !e.target.classList.contains("btn--not-active")
   ) {
     vidZapCounter++;
     vidZap();
   }
   if (
-    e.target.classList.contains("section-music__btn--right") &&
+    e.target.classList.contains("section-music__btn--next") &&
     !e.target.classList.contains("btn--not-active")
   ) {
     vidZapCounter--;
