@@ -389,6 +389,7 @@ html {
 }
 .section-projects .project__img {
   width: 5rem;
+  height: 5rem;
   aspect-ratio: 1;
 }
 .section-projects .project__name {
